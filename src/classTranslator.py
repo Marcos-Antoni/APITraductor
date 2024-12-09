@@ -45,8 +45,9 @@ class ClassTranslator:
           
         traducir = self.traductor.translate(text, src=self.src, dest=self.dest)
         
-        return {"text":traducir.text, "src":traducir.src, "dest":traducir.dest}
-    
+        data = {"text":traducir.text, "src":traducir.src, "dest":traducir.dest}
+        
+        return json.dumps(data)
     
     
     
